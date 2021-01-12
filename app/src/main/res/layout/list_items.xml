@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ice Cream"
+        android:textAlignment="center"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:layout_margin="8dp"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/itemImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="4dp"
+            android:padding="4dp"/>
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp"
+            android:layout_toRightOf="@id/itemImageView"
+            >
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:layout_margin="4dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
+                android:id="@+id/quantinkgTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="15sp"
+                android:layout_below="@id/titleTextView"
+
+                />
+            <TextView
+                android:id="@+id/kgTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kg"
+                android:textSize="15sp"
+                android:layout_below="@id/titleTextView"
+                android:layout_toRightOf="@id/quantinkgTextView"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativelayout1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_margin="2dp"
+            android:layout_below="@id/relativelayout"
+            android:layout_toRightOf="@id/itemImageView">
+            <TextView
+                android:id="@+id/rupeeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
+                android:id="@+id/amountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/rupeeTextView"
+
+                />
+            <TextView
+                android:id="@+id/rupee1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textSize="15sp"
+                android:textColor="@color/colorText"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/amountTextView"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
+                android:id="@+id/amount1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textColor="@color/colorText"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/rupee1TextView"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativelayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativelayout"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/relativelayout1">
+
+            <Button
+                android:id="@+id/minusButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:text=" - "
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:background="@android:color/white"
+                style="@style/TextAppearance.MaterialComponents.Button"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/quantityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/minusButton"/>
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text=" + "
+                android:textColor="@android:color/black"
+                android:background="@android:color/white"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/quantityTextView"
+                style="@style/TextAppearance.MaterialComponents.Button"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativelayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_toRightOf="@id/relativelayout2"
+            android:layout_below="@id/relativelayout">
+
+            <Button
+                android:id="@+id/buyButton"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="BUY"
+                android:textColor="@android:color/white"
+                android:background="@drawable/gradient_normal"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+        </RelativeLayout>
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
